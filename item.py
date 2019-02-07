@@ -1,15 +1,16 @@
+import datetime
+
 class Item(object):
     def __init__(self, complete, action):
         self.complete = complete
         self.action = action
 
-    def compile(self):
+    def compile(self,complete, action):
         task = []
-        task.append(action)
-        task.append(complete)
         now = datetime.date.today()
         task.append(now)
-        return task
-
-def func():
-    print('This works')
+        task.append(complete)
+        task.append(action)
+        file = open('todos.txt', 'w')
+        file.write(f'[{now},{complete},{action}]')
+        file.close()
