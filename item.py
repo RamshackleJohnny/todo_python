@@ -11,6 +11,6 @@ class Item(object):
         task.append(now)
         task.append(complete)
         task.append(action)
-        file = open('todos.txt', 'w')
+        file = open('todos.txt', 'a')
         file.write(f'[{now},{complete},{action}]')
         file.close()
