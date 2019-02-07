@@ -5,7 +5,7 @@ class Manager(object):
         pass
 
     def menu(self):
-        print("Do you want to add something or check your list?")
+        print("Do you want to add something, remove something, or check your list?")
         option = input("> ")
         option = option.lower()
         print(option)
@@ -13,6 +13,11 @@ class Manager(object):
             Manager.add('')
         elif option == 'check':
             print("These things are on your list")
+            Manager.view('')
+            Manager.menu('')
+        elif option == 'remove':
+            print('These are your options, which do you want to remove? (Pick the line number)')
+
             Manager.view('')
             Manager.menu('')
         else:
@@ -29,6 +34,7 @@ class Manager(object):
         task = input("> ")
         print("Is it done already?")
         done = input("> ")
+        done = done.lower()
         if done =='yes':
             done = True
         elif done == 'no':
@@ -36,3 +42,4 @@ class Manager(object):
         print('Your list now contains the following')
         Item.compile('', done, task)
         Manager.view('')
+        Manager.menu('')

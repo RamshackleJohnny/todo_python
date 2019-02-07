@@ -1,2 +1,4 @@
-[2019-02-07,False,Lancaster ave] 
-[2019-02-07,True,Mischief] 
+[2019-02-07, False, kdl;asf] 
+[2019-02-07, False, kdkdkkdkdkdkdkddkd] 
+[2019-02-07, False, aldkdksi] 
+[2019-02-07, probably, NO] 
