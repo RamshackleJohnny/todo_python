@@ -5,7 +5,7 @@ class Manager(object):
         pass
 
     def menu(self):
-        print("Do you want to add something, remove something, or check your list?")
+        print("Do you want to add something, mark something as done, remove something, or check your list?")
         option = input("> ")
         option = option.lower()
         print(option)
@@ -24,6 +24,23 @@ class Manager(object):
             with open('todos.txt','w') as output:
                 for thedo, line in enumerate(inpot):
                     if thedo != theline - 1:
+                        output.write(line)
+            print('Your list now contains the following')
+            Manager.view('')
+            Manager.menu('')
+        elif option == 'mark':
+            inpot = open('todos.txt','r').readlines()
+            print("These things are on your list")
+            Manager.view('')
+            print('Which do you want to mark as complete? (Write the line number)')
+            theline = input("> ")
+            theline = int(theline)
+            with open('todos.txt','w') as output:
+                for thedo, line in enumerate(inpot):
+                    if thedo != theline - 1:
+                        output.write(line)
+                    elif thedo == theline -1:
+                        line = line.replace('Completed?: False', 'Completed?: True')
                         output.write(line)
             print('Your list now contains the following')
             Manager.view('')
