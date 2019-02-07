@@ -1,4 +1,3 @@
-[2019-02-07, False, kdl;asf] 
-[2019-02-07, False, kdkdkkdkdkdkdkddkd] 
-[2019-02-07, False, aldkdksi] 
-[2019-02-07, probably, NO] 
+Created: 2019-02-07 | Action: Yea  | Completed?: True 
+Created: 2019-02-07 | Action: Honestly no | Completed?: probably 
+Created: 2019-02-07 | Action: IIII | Completed?: False 
