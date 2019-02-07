@@ -14,6 +14,7 @@ class Manager(object):
         elif option == 'check':
             print("These things are on your list")
             Manager.view('')
+            Manager.menu('')
         else:
             print("Sorry, I have no idea what you're talking about.")
             Manager.menu('')
