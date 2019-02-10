@@ -60,6 +60,9 @@ class Manager(object):
                     elif pryy == pry -1:
                         line = line.replace('Priority:', 'Priority: ' + pryo)
                         output.write(line)
+            print('Your list now contains the following')
+            Manager.view('')
+            Manager.menu('')
         else:
             print("Sorry, I have no idea what you're talking about.")
             Manager.menu('')
