@@ -5,7 +5,7 @@ class Manager(object):
         pass
 
     def menu(self):
-        print("Do you want to add something, mark something as done, remove something, or check your list?")
+        print("Do you want to add something, mark something as done, add priority numbers, remove something, or check your list?")
         option = input("> ")
         option = option.lower()
         print(option)
@@ -45,6 +45,18 @@ class Manager(object):
             print('Your list now contains the following')
             Manager.view('')
             Manager.menu('')
+        elif: option == 'prioritize':
+            Manager.view('')
+            print('Which do you want to add a priority number for? (Write the line number)')
+            pry = input("> ")
+            pry = int(pyr)
+            with open('todos.txt','w') as output:
+                for pry, line in enumerate(inpot):
+                    if pry != theline - 1:
+                        output.write(line)
+                    elif pry == theline -1:
+                        line = line.replace('Completed?: False', 'Completed?: True')
+                        output.write(line)
         else:
             print("Sorry, I have no idea what you're talking about.")
             Manager.menu('')
