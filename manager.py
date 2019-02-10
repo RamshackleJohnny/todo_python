@@ -53,13 +53,12 @@ class Manager(object):
             pry = int(pry)
             print('On a scale of 1 to 10, how important is this?')
             pryo = input("> ")
-            pryo = int(pryo)
             with open('todos.txt','w') as output:
                 for pryy, line in enumerate(impot):
                     if pryy!= pry - 1:
                         output.write(line)
                     elif pryy == pry -1:
-                        line = line.replace('Priority:', 'Priority:', pryo)
+                        line = line.replace('Priority:', 'Priority:' + pryo)
                         output.write(line)
         else:
             print("Sorry, I have no idea what you're talking about.")
