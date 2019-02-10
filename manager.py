@@ -58,7 +58,7 @@ class Manager(object):
                     if pryy!= pry - 1:
                         output.write(line)
                     elif pryy == pry -1:
-                        line = line.replace('Priority:', 'Priority:' + pryo)
+                        line = line.replace('Priority:', 'Priority: ' + pryo)
                         output.write(line)
         else:
             print("Sorry, I have no idea what you're talking about.")
